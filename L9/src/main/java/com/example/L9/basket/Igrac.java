@@ -54,18 +54,22 @@ public class Igrac {
 
 	public void izracunajProcenatBacanja() {
 		ProcenatBacanja = BrPogodjenoBacanja / BrPokusanoBacanja * 100;
+		ProcenatBacanja = Math.round(ProcenatBacanja * 10.0) / 10.0;
 	}
 
 	public void izracunajProcenatZaDvaPoena() {
 		ProcenatZaDvaPoena = BrPogodjenoDvaPoena / BrPokusanoDvaPoena * 100;
+		ProcenatZaDvaPoena = Math.round(ProcenatZaDvaPoena * 10.0) / 10.0;
 	}
 
 	public void izracunajProcenatZaTriPoena() {
 		ProcenatZaTriPoena = BrPogodjenoTriPoena / BrPokusanoTriPoena * 100;
+		ProcenatZaTriPoena = Math.round(ProcenatZaTriPoena * 10.0) / 10.0;
 	}
 
 	public void izracunajPoene() {
 		Poeni = BrPogodjenoBacanja + 2 * BrPogodjenoDvaPoena + 3 * BrPogodjenoTriPoena;
+		Poeni = Math.round(Poeni * 10.0) / 10.0;
 	}
 
 	public void izracunajUspesnost() {
@@ -73,21 +77,26 @@ public class Igrac {
 				+ BrBlokiranihSuteva + BrAsistencija + BrUkradenihLopti)
 				- (BrPokusanoBacanja - BrPogodjenoBacanja + BrPokusanoDvaPoena - BrPogodjenoDvaPoena
 						+ BrPokusanoTriPoena - BrPogodjenoTriPoena + BrIzgubljenihLopti);
+		IndeksUspesnosti = Math.round(IndeksUspesnosti * 10.0) / 10.0;
 	}
 
 	public void izracunajEfektivniProcenatSuta() {
 		EfektivniProcenatSuta = (BrPogodjenoDvaPoena + 1.5 * BrPogodjenoTriPoena)
 				/ (BrPokusanoDvaPoena + BrPokusanoTriPoena) * 100;
+		EfektivniProcenatSuta = Math.round(EfektivniProcenatSuta * 10.0) / 10.0;
 	}
 
 	public void izracunajStvarniProcenatSuta() {
 		StvarniProcenatSuta = Poeni / (2 * (BrPokusanoDvaPoena + BrPokusanoTriPoena + 0.475 * BrPokusanoBacanja))
 				* 100;
+		StvarniProcenatSuta = Math.round(StvarniProcenatSuta * 10.0) / 10.0;
 	}
 
 	public void izracunajHolingerovOdnos() {
 		HolingerovOdnosAsistencija = BrAsistencija / (BrPokusanoDvaPoena + BrPokusanoTriPoena
 				+ 0.475 * BrPokusanoBacanja + BrAsistencija + BrIzgubljenihLopti) * 100;
+		HolingerovOdnosAsistencija = Math.round(HolingerovOdnosAsistencija * 10.0) / 10.0;
+		
 	}
 
 	public void izvedeneStatistike() {
@@ -122,16 +131,27 @@ public class Igrac {
 	public void izracunajStatistikuIgraca() {
 
 		BrPogodjenoBacanja /= BrUtakmica;
+		BrPogodjenoBacanja = Math.round(BrPogodjenoBacanja * 10.0) / 10.0;
 		BrPokusanoBacanja /= BrUtakmica;
+		BrPokusanoBacanja = Math.round(BrPokusanoBacanja * 10.0) / 10.0;
 		BrPogodjenoDvaPoena /= BrUtakmica;
+		BrPogodjenoDvaPoena = Math.round(BrPogodjenoDvaPoena * 10.0) / 10.0;
 		BrPokusanoDvaPoena /= BrUtakmica;
+		BrPokusanoDvaPoena = Math.round(BrPokusanoDvaPoena * 10.0) / 10.0;
 		BrPogodjenoTriPoena /= BrUtakmica;
+		BrPogodjenoTriPoena = Math.round(BrPogodjenoTriPoena * 10.0) / 10.0;
 		BrPokusanoTriPoena /= BrUtakmica;
+		BrPokusanoTriPoena = Math.round(BrPokusanoTriPoena * 10.0) / 10.0;
 		BrSkokova /= BrUtakmica;
+		BrSkokova = Math.round(BrSkokova * 10.0) / 10.0;
 		BrBlokiranihSuteva /= BrUtakmica;
+		BrBlokiranihSuteva = Math.round(BrBlokiranihSuteva * 10.0) / 10.0;
 		BrAsistencija /= BrUtakmica;
+		BrAsistencija = Math.round(BrAsistencija * 10.0) / 10.0;
 		BrUkradenihLopti /= BrUtakmica;
+		BrUkradenihLopti = Math.round(BrUkradenihLopti * 10.0) / 10.0;
 		BrIzgubljenihLopti /= BrUtakmica;
+		BrIzgubljenihLopti = Math.round(BrIzgubljenihLopti * 10.0) / 10.0;
 	}
 
 	@Override
