@@ -86,6 +86,7 @@ public class AfrickaReprezentacija {
 		for (Igrac i : igraci) {
 			i.izracunajStatistikuIgraca();
 			i.izvedeneStatistike();
+			i.zaokrugli();
 		}
 	}
 }
