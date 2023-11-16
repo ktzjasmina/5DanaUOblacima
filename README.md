@@ -1,3 +1,3 @@
 # 5DanaUOblacima
-##Lista tehnologija
+## Lista tehnologija
 SpringBoot
